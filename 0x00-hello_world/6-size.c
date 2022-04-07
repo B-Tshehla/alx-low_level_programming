@@ -5,7 +5,7 @@
  * Return: Always 0 (Success)
  */
 int main(void)
-{ 
+{
 	int x;
 	long int y;
 	long long int z;

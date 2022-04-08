@@ -9,10 +9,6 @@
 /* betty style doc for function main goes there*/
 int main(void)
 {
-	
-/**
- * Description:Program checks if the random number is less, greater or equal zero
- */
 	int n;
 
 	srand(time(0));

@@ -8,7 +8,7 @@ int main(void)
 	{
 		if (x != 'q' && x != 'e')
 		{
-			putchar(x)
+			putchar(x);
 		}
 	}
 		putchar('\n');

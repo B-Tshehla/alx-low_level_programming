@@ -2,7 +2,7 @@
 /**
  * main-"The program prints _putchar followed by a new line"
  * File: "0-putchar.c"
- * Return- "Always 0 (Success)"
+ * Return: "Always 0 (Success)"
  */
 
 int main(void)

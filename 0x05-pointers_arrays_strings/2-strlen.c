@@ -3,6 +3,7 @@
  *_strlen - Return the legnth of a string
  *
  *@s:"Points to a character"
+ *Return: "The legnth of the string"
  */
 int _strlen(char *s)
 {

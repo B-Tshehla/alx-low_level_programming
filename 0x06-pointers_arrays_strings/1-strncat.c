@@ -1,4 +1,4 @@
-#include "main.c"
+#include "main.h"
 /**
  * _strncat - " function pointer that concatinate two strings"
  *
@@ -18,11 +18,11 @@ char *_strncat(char *dest, char *src, int n)
 		len++;
 	}
 
-	while (x < n && src[x] !== '\0')
+	while (x < n && src[x] != '\0')
 	{
 		dest[len] =src[x];
 		len++;
-		x++
+		x++;
 	}
 	dest[len + n + 1] ='\0';
 

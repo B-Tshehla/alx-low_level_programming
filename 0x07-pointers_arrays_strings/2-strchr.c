@@ -20,8 +20,7 @@ char *_strchr(char *s, char c)
 	for (x = 0; x < y; x++)
 	{
 		if (s[x] == c)
-		{
-		
+		{	
 			return (s + x);
 		}
 	}

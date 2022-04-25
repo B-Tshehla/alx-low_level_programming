@@ -8,11 +8,11 @@
  *
  * Return: "The destination array"
  */
-char * _memcpy(char *dest, char *src, unsigned int n)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int x = 0;
 
-	while ( x < n)
+	while (x < n)
 	{
 		dest[x] = src[x];
 		x++;

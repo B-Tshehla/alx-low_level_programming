@@ -6,7 +6,7 @@
  *
  * Return: "Return an integer"
  */
-int getSquare(int n)
+int _sqrt_recursion(int n)
 {
 	int x = 1;
 

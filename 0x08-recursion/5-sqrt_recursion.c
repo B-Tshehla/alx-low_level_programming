@@ -6,16 +6,9 @@
  *
  * Return: "Return an integer"
  */
-int getSquare(int n, int x);
-
-int _sqrt_recursion(int n)
+int getSquare(int n)
 {
-	return (getSquare(n, 1));
-}
-
-int getSquare(int n, int x)
-{
-	
+	int x = 1;
 
 	if (x * x == n)
 	{
@@ -23,9 +16,9 @@ int getSquare(int n, int x)
 	}
 	if (x * x < n)
 	{
-		return ( x + 1);
+		return (x + 1);
 	}
-	else 
+	else
 	{
 		return (-1);
 	}

@@ -1,6 +1,6 @@
 #include "main.h"
 
-int _strlen(char *s)
+char *_strchr(char *s, char c)
 {
 	return (s);
 }

@@ -23,6 +23,10 @@ int sum_them_all(const unsigned int n, ...)
 			x++;
 		}
 	}
+	if (n == 0)
+	{
+		return (0);
+	}
 	va_end(list);
 
 	return (sum);

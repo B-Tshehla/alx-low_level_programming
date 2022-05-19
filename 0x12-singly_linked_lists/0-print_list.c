@@ -25,7 +25,7 @@ size_t print_list(const list_t *h)
             return ("nil");
         }
         current = current->next;
-        numNodes++
+        numNodes++;
     }
     return (numNodes);
 }

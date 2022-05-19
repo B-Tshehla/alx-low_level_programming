@@ -16,15 +16,8 @@ size_t print_list(const list_t *h)
     while (currlist != NULL)
     {
         printf("[%d] %s\n", currlist->len);
-        if (currlist->str != NULL)
-        {
-            current->str;
-        }
-        else
-        {
-            return ("nil");
-        }
-        current = current->next;
+        currlist->str != NULL ? currlist->str : "(nil)";
+        currlist = currlist->next;
         numNodes++;
     }
     return (numNodes);

@@ -3,6 +3,7 @@
 /**
  * get_endianness - "Checks the endianness."
  *
+ *@void: "nothing is passed to the function"
  * Return: "If big-endian - 0 or 1"
  *        
  */

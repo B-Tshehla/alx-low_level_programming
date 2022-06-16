@@ -4,6 +4,7 @@
  *
  * @dest: "Points to the destination string"
  * @src: "Points to the source string"
+ * @n: size of full string
  *
  * Return: "Copied string into dest"
  */

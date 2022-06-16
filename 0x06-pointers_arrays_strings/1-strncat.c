@@ -8,23 +8,21 @@
  *
  * Return: " A string that that concatinate two strings in dest"
  */
+
 char *_strncat(char *dest, char *src, int n)
 {
-	int len = 0;
-	int x = 0;
+	int count_dest;
+	int i;
 
-	while (dest[len] != '\0')
+	count_dest = 0;
+	i = 0;
+	while (dest[count_dest])
 	{
-		len++;
+		count_dest++;
 	}
-
-	while (x < n && src[x] != '\0')
+	while (i < n && src[i] != '\0')
 	{
-		dest[len] =src[x];
-		len++;
-		x++;
+		dest[count_dest++] = src[i++];
 	}
-	dest[len + n + 1] ='\0';
-
 	return (dest);
 }

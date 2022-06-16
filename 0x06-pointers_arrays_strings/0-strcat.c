@@ -7,15 +7,27 @@
  *
  * Return: "A pointer pointing to a string"
  */
-char *strcat(char *dest, const char *src)
+char *_strcat(char *dest, char *src)
 {
-	int index = 0, dest_len = 0;
+	int count_src;
+	int count_dest;
+	int i;
 
-	while (dest[index++])
-		dest_len++;
-
-	for (index = 0; src[index]; index++)
-		dest[dest_len++] = src[index];
-
+	count_src = 0;
+	count_dest = 0;
+	i = 0;
+	while (src[count_src])
+	{
+		count_src++;
+	}
+	while (dest[count_dest])
+	{
+		count_dest++;
+	}
+	count_src--;
+	while (i <= count_src)
+	{
+		dest[count_dest++] = src[i++];
+	}
 	return (dest);
 }

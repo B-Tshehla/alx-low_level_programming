@@ -1,65 +1,54 @@
 #include "main.h"
-#include <stdlib>
+
 /**
- * string_nconcat - "concatenates two strings"
- * @s1: "first string"
- * @s2: "second string"
- * @n: "first bytes of string 2 to be used"
- * Return:"pointer or NULL"
+ * _strlen - measures str length
+ * @s: str to be measured
+ * Return: str length
  */
 
-unsigned int _strlen (char *s)
+int _strlen(char *s)
 {
-	unsigned int x = 0;
+	int i = 0;
 
-	while (s[size] != '\0')
-	{
-		x++;
-	}
-	return (x);
+	while (s[i] != 0)
+		i++;
+	return (i);
 }
+
+/**
+ * string_nconcat - allocates memory
+ * @n: int to allocate memory for
+ * @s1: first str
+ * @s2: seconf str
+ * Return: pointer to the allocated memory.
+ */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int x = 0, y = 0;
-	char *s;
+	char *malloc_int;
+	unsigned int i, len_s1 = _strlen(s1), len_s2 = _strlen(s2);
 
 	if (s1 == NULL)
-	{
-		s1 = "";
-	}
+		s1 = NULL;
 	if (s2 == NULL)
-	{
-		s2  "";
-	}
-	
-	if (n < _strlen(s2))
-	{
-		s = malloc(_strlen(s1) + n * sizeof(char) + 1);
-	}
+		s2 = NULL;
+	if (n >= len_s2)
+		n = len_s2;
 	else
 	{
-		s = malloc(_strlen(s1) + _strlen(s2) + 2);
+		malloc_int = malloc(len_s1 + n + 1);
 	}
-	
-	if (s == 0)
+	if (malloc_int == 0)
+		return (0);
+	for (i = 0; i < len_s1 + n; i++)
 	{
-		return (NULL);
+		if (i >= len_s1)
+		{
+			malloc_int[i] = s2[i - len_s1];
+			continue;
+		}
+		malloc_int[i] = s1[i];
 	}
-
-	while (s1[x] != '\0')
-	{
-		s[x] = s1[x];
-		x++;
-	}
-
-	while (s2[y] != '\0' && j < n)
-	{
-		s[x] = s2[y];
-		y++;
-		x++;
-	}
-	s[x] = '\0';
-
-	return (s);
+	malloc_int[len_s1 + n] = '\0';
+	return (malloc_int);
 }

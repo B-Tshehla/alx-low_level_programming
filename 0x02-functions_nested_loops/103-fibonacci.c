@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * main - Prints the sum of even-valued Fibonacci sequence
@@ -27,7 +28,7 @@ int main(void)
 		fib1 = fib2;
 		fib2 = fibsum;
 	}
-	_putchar(tot_sum);
+	printf("%.0f\n", tot_sum);
 
 	return (0);
 }

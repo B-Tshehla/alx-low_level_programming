@@ -9,31 +9,12 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	int len1 = 0;
-	int len2 = 0;
-
-
-	while (s1[len1])
+	while (*s1 && *s2 && *s1 == *s2)
 	{
-		len1++;
+		s1++;
+		s2++;
 	}
 
-	while (s2[len2])
-	{
-		len2++;
-	}
-
-	if (len1 < len2)
-	{
-		return (-15);
-	}
-	else if (len1 > len2)
-	{
-		return (15);
-	}
-	else
-	{
-		return (0);
-	}
+	return (*s1 - *s2);
 }
 

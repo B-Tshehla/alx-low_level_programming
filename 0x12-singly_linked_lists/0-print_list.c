@@ -2,29 +2,30 @@
 #include <stdio.h>
 
 /**
-* print_list - "print elements of linkedlist"
-* @h: "linked list"
-* 
-* Return: "number of nodes"
-*/
+ * print_list - prints all elements of a list
+ * @h: node to be printed
+ *
+ * Return: number of nodes
+ */
 
 size_t print_list(const list_t *h)
 {
-    size_t numNodes = 0;
-    const list_t *currlist = h;
+	const list_t *nodes = h;
+	int i = 0;
 
-    while (currlist != NULL)
-    {
-        if (h->str == NULL)
-        {
+	while (nodes)
+	{
+		if (nodes->str == NULL)
+		{
 			printf("[0] (nil)\n");
-        }
+			nodes = nodes->next;
+		}
 		else
-        {
-			printf("[%d] %s\n", h->len, h->str);
-        }
-		numNodes++;
-		h = h->next;
-    }
-    return (numNodes);
+		{
+			printf("[%u] %s\n", nodes->len, nodes->str);
+			nodes = nodes->next;
+		}
+		i++;
+	}
+	return (i);
 }
